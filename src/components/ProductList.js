@@ -9,7 +9,7 @@ export default class ProductList extends Component {
             <React.Fragment>
                 <div className="py-5">
                     <div className="container">
-                    <Title name="our" title="products"/>
+                    <Title name="our" title="Shoes"/>
                        <div className="row">
                             { storeProducts.map(product =>{
                                 return <Product key={product.id} product={product} />;
