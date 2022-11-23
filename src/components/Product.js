@@ -4,13 +4,13 @@ import styled from 'styled-components';
 
 export default class Product extends Component {
     render() {
-        const {id, title, img, price} = this.props.product;
+        const {id, title, firstImage, price} = this.props.product;
         return (
             <ProducrWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
                <div className="card">
                     {
                         // <Link to="/details">
-                        <img src={img} alt="product" className="card-img-top" />
+                        <img src={firstImage} alt="product" className="card-img-top" />
                     // </Link>
                     }
 
