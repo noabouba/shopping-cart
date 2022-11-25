@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export default class Product extends Component {
     render() {
         const {id, title, firstImage, price} = this.props.product;
+        
         return (
             <ProducrWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
                <div className="card">
                     {
-                        // <Link to="/details">
-                        <img src={firstImage} alt="product" className="card-img-top" />
-                    // </Link>
+                        <Link to={`details/${id}`}>
+                            <img src={firstImage} alt="product" className="card-img-top" />
+                        </Link>
                     }
 
                  <div className="card-footer d-flex justify-content-between">
