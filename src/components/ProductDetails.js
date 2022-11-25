@@ -9,13 +9,13 @@ class ProductDetails extends Component {
 
         return (
             <React.Fragment>
-                <div className="py-5">
-                    <div className="container py-5">
-                        <div className="row>">
-                            <div className="mx-auto text-center my-5">
+                <div>
+                    <div className="container" >
+                        <div >
+                            <div className="mx-auto text-center my-4">
                                 <h1>{title}</h1>
                             </div>
-                            <div className="row">
+                            <div className="row" style={{"background-color":"#f6f6f6"}}>
                                 <div className="col-10 mx-auto col-md-6 my-3" style={{'border-right': "solid black 3px"}}>
                                     <img src={require(`../${firstImage}`)} className="img-fluid mx-auto col-6" alt="product" />
                                     <img src={require(`../${secondImage}`)} className="img-fluid mx-auto col-6" alt="product" />
