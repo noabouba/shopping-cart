@@ -14,7 +14,6 @@ function App() {
     <Router>
       <Routes>
           <Route exact path='/' element={< ProductList />}></Route>
-          {/* <Route exact path='/details' element={< ProductDetails />}></Route> */}
           <Route path="/details/:id" element={<ProductDetails/>}/>
       </Routes>
     </Router>
