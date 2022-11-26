@@ -22,7 +22,7 @@ class ProductDetails extends Component {
                                 </div>
                                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
                                     <h2>model:{title}</h2>
-                                    <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
+                                    <h4 className="text-title text-uppercase text-muted mt-2 mb-1">
                                         made by: <span className="text-uppercase">{company}</span>
                                     </h4>
                                     <h4 className="text-blue">
@@ -30,7 +30,7 @@ class ProductDetails extends Component {
                                             Price : <span>$</span>{price}
                                         </strong>
                                     </h4>
-                                    <p className="text-capitalize font-weight-bold mt-3 mb-0">
+                                    <p className="text-capitalize font-weight-bold mt-2 mb-0">
                                             Buy at {company}
                                     </p>
                                     <p className="text-muted lead">
