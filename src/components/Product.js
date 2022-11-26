@@ -9,7 +9,7 @@ export default class Product extends Component {
         return (
             <ProducrWrapper className="col-9 mx-auto col-md-5 my-2">
                
-                <div className="card">
+                <Link to={`details/${id}`} className="card">
                     <div className="card-footer d-flex justify-content-between">
                         <p className="align-self-center mb-0">
                             {title}
@@ -27,7 +27,7 @@ export default class Product extends Component {
                             
                         </h5>
                     </div>
-                </div>
+                </Link>
             </ProducrWrapper>
         );
     }
