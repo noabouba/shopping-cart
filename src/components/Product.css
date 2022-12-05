@@ -25,3 +25,12 @@ img{
 .img-container:hover .cart-btn{
     transform:translate(0, 0);
 }
+.cart-btn{
+    position:absolute;
+    bottom:0;
+    background:var(--lightBlue);
+    border-radius:0 rem 0 0 0;
+}
+.img-container:hover .cart-btn{
+    transform:translate(0, 0);
+}
