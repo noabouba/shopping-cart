@@ -26,10 +26,10 @@ function Product(props) {
                     </div>
                 </div>
             </Link>
-            <button className='cart-btn' onClick={()=> {addToCart(props.product)}}>
-                +
-            </button>
-            
+            {!props.isCartView ? 
+                <button  className='cart-btn' onClick={()=> {addToCart(props.product)}}> + 
+                </button> : <div/>
+            }
         </div>
     );
 }
