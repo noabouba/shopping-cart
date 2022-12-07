@@ -11,8 +11,8 @@ function ProductDetails(props) {
             <div className="mx-auto text-center my-4">
                 <h1>{title}</h1>
             </div>
-            <div className="row" style={{"background-color":"#f6f6f6"}}>
-                <div className="col-10 mx-auto col-md-6 my-3" style={{'border-right': "solid black 3px"}}>
+            <div className="row" style={{"backgroundColor":"#f6f6f6"}}>
+                <div className="col-10 mx-auto col-md-6 my-3" style={{'borderRight': "solid black 3px"}}>
                     <img src={require(`../${firstImage}`)} className="img-fluid mx-auto col-6" alt="product" />
                     <img src={require(`../${secondImage}`)} className="img-fluid mx-auto col-6" alt="product" />
                 </div>

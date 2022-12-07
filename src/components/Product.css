@@ -12,7 +12,7 @@ img{
     border-top:transparent;
     transition:all 1s linear;
     padding:inherit !important;
-    padding-left:5% !important;
+    padding-left:10% !important;
 }
 .card:hover{
     border:0.04rem solid rgba(0,0,0,0.2);
@@ -23,5 +23,18 @@ img{
     background:rgba(247,247,247);
 }
 .img-container:hover .cart-btn{
+    transform:translate(0, 0);
+}
+.cart-btn{
+    position:absolute;
+    bottom:0px;
+    border-radius: 2px;
+    border-width: 1.5px;
+    border-color: rgb(127, 151, 172);
+    background-color: rgb(221, 231, 246);
+    height: 102px;
+    width: 30px;
+}
+.img-container:hove  .cart-btn{
     transform:translate(0, 0);
 }
