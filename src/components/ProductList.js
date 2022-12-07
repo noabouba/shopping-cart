@@ -1,6 +1,5 @@
 import React from 'react';
 import Product from "./Product";
-// import {storeProducts} from '../data.js';
 
 function ProductList(props) {
 
@@ -9,7 +8,7 @@ function ProductList(props) {
             <div className="container">
                 <div className="row">
                     { props?.products?.map(product =>{
-                        return <Product product={product} key={product._id} isCartView={props.isCartView}/>;
+                        return <Product product={product} key={product._id} isInCart={props.isInCart}/>;
                     })
                     }
                 </div>
