@@ -1,20 +1,12 @@
 import React, { useState } from 'react';
-import Product from "../Product";
+import ProductList from '../ProductList.js';
 
-function Cart(props) {
+function Cart() {
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || []);
 
     return (
-        <div className="py-3">
-            <div className="container">
-                <div className="row">
-                    { cart?.map(product =>{
-                        console.log(product)
-                        return <Product product={product} key={product._id} isInCart={props.isInCart}/>;
-                    })
-                    }
-                </div>
-            </div> 
+        <div>
+            <ProductList products={cart} isInCart={true}></ProductList>
         </div>
     );
 }

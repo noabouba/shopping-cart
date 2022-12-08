@@ -8,7 +8,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import Navbar from './components/navbar';
+import Navbar from './components/navbar/NavBar';
 import Cart from './components/shopping-cart/cart';
 
 
