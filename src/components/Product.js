@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import './Product.css';
-import addToCart from '../productService.js';
 
 function Product(props) {
     const {_id, name, image, price} = props.product;
-    
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || []);
+    const [isInCart, setIsInCart] = useState();
+
+    useEffect(() => {
+        setIsInCart(cart.some(item => { return (item._id === _id) ? true : false }));
+    }, [cart]);
+
+    const addToCart = (product) => {
+        setCart(cart => [...cart, product]);
+        
+        window.localStorage.setItem('cart', JSON.stringify([...JSON.parse(localStorage.getItem('cart')) || [], product]));
+    };
+
     return (
         <div className="col-9 mx-auto col-md-5 my-2">
             <Link to={`details/${_id}`} style={{"textDecoration": "none", "color":"inherit"}}>
@@ -25,7 +36,7 @@ function Product(props) {
                     </div>
                 </div>
             </Link>
-            {!props.isCartView ? 
+            {!isInCart ? 
                 <button  className='cart-btn' onClick={()=> {addToCart(props.product)}}> + 
                 </button> 
                 : <div/>

@@ -17,13 +17,13 @@ const Navbar = () => {
         <>
            <Nav>
             <NavLogo to="/">
-                Shoes
+            Cooktails
             </NavLogo>
             <Bars />
 
             <NavMenu>
                 <NavBtn>
-                    <NavBtnLink to="/details/2"><FaShoppingCart/></NavBtnLink>
+                    <NavBtnLink to="/cart"><FaShoppingCart/></NavBtnLink>
                 </NavBtn>
             </NavMenu>
            </Nav> 

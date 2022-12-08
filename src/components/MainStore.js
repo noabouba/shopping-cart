@@ -19,7 +19,7 @@ function MainStore() {
   return (
     <div>
       <Title name="our" title="Cooktails"/>
-      <ProductList products={products} isCartView={false}></ProductList>
+      <ProductList products={products} isInCart={false}></ProductList>
     </div>
   );
 }
