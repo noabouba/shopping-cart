@@ -1,36 +1,36 @@
 import React from 'react';
-import {storeProducts} from '../data.js';
 import {withRouter, ButtonContainer} from '../Utils.js';
 import {Link} from 'react-router-dom';
+import {getProduct} from '../productService.js';
 
 function ProductDetails(props) {
-    const {title, firstImage, secondImage, price, company, info} = storeProducts.at((props.router.params.id))
-
+    const { name, image, price, description} = getProduct(props.router.params.id);
+    console.log(name)
     return (
         <div className="container">
             <div className="mx-auto text-center my-4">
-                <h1>{title}</h1>
+                <h1>{name}</h1>
             </div>
             <div className="row" style={{"backgroundColor":"#f6f6f6"}}>
                 <div className="col-10 mx-auto col-md-6 my-3" style={{'borderRight': "solid black 3px"}}>
-                    <img src={require(`../${firstImage}`)} className="img-fluid mx-auto col-6" alt="product" />
-                    <img src={require(`../${secondImage}`)} className="img-fluid mx-auto col-6" alt="product" />
+                    <img src={image} className="img-fluid mx-auto col-6" alt="product" />
+                    {/* <img src={require(`../${secondImage}`)} className="img-fluid mx-auto col-6" alt="product" /> */}
                 </div>
                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                    <h2>model:{title}</h2>
-                    <h4 className="text-title text-uppercase text-muted mt-2 mb-1">
+                    <h2>model:{name}</h2>
+                    {/* <h4 className="text-title text-uppercase text-muted mt-2 mb-1">
                         made by: <span className="text-uppercase">{company}</span>
-                    </h4>
+                    </h4> */}
                     <h4 className="text-blue">
                         <strong>
                             Price : <span>$</span>{price}
                         </strong>
                     </h4>
-                    <p className="text-capitalize font-weight-bold mt-2 mb-0">
+                    {/* <p className="text-capitalize font-weight-bold mt-2 mb-0">
                             Buy at {company}
-                    </p>
+                    </p> */}
                     <p className="text-muted lead">
-                        {info}
+                        {description}
                     </p>
                     
                     <Link to="/">
