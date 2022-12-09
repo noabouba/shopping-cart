@@ -8,8 +8,8 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import Navbar from './components/navbar';
-import Cart from './components/shopping-cart/cart';
+import Navbar from './components/navbar/NavBar';
+import Cart from './components/cart';
 
 
 function App() {

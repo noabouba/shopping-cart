@@ -2,7 +2,6 @@ import React from 'react';
 import Product from './product/Product';
 
 function ProductList(props) {
-
     return (
         <div className="py-3">
             <div className="container">

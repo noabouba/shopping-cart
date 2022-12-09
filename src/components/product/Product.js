@@ -19,7 +19,7 @@ function Product(props) {
 
     return (
         <div className="col-9 mx-auto col-md-5 my-2">
-            <Link to={`details/${_id}`} style={{"textDecoration": "none", "color":"inherit"}}>
+            <Link to={`/details/${_id}`} style={{"textDecoration": "none", "color":"inherit"}}>
                 <div className="card">
                     <div className="card-footer d-flex justify-content-between">
                         <span className="align-self-center mb-0">
