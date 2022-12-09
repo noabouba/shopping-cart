@@ -1,0 +1,32 @@
+.bn3637 {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 0.5rem;
+
+    width: 20%;
+    margin-left: 40%;
+  }
+  
+  .bn37 {
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: #fff;
+    color: #000;
+    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+  }
+    
+  .bn37:hover {
+    text-decoration: none;
+    cursor: pointer;
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+  }
