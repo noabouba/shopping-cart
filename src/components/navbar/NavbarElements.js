@@ -4,12 +4,13 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
     background: #0061A8;
-    height: 85px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.2rem calc((100vw - 1000px) / 2);
     z-index: 12;
+    margin-bottom:10px;
 `;
 export const NavLogo = styled(Link)`
   cursor: pointer;
@@ -72,10 +73,10 @@ export const NavBtn = styled.nav`
 export const NavBtnLink = styled(Link)`
   border-radius: 4px;
   background: transparent;
-  padding: 10px 22px;
+  padding: 5px 10px;
   color: #fff;
   outline: none;
-  border: 1px solid #fff;
+  border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;

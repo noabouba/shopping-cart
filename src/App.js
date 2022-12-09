@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import MainStore from "./components/MainStore";
 import ProductDetails from "./components/ProductDetails";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,8 +8,8 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import Navbar from './components/navbar';
-
+import Navbar from './components/navbar/NavBar';
+import Cart from './components/cart';
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
       <Routes>
           <Route exact path='/' element={< MainStore />}></Route>
           <Route path="/details/:id" element={<ProductDetails/>}/>
+          <Route path="/cart" element={<Cart/>}/>
       </Routes>
     </Router>
   );
