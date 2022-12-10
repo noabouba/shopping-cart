@@ -10,6 +10,7 @@ function Cart() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [isBought, setIsBought] = useState((localStorage.getItem('isBought')));
+    const pathname = window.location.pathname
 
     React.useEffect(() => {
         window.addEventListener('storage', () => {
@@ -25,7 +26,7 @@ function Cart() {
             setFirstName("");
             setLastName("");
         }
-    }, []);
+    }, [pathname]);
 
     const getTotalPrice = () => {
         return cart.reduce((curr,next) => curr = curr + next.price, 0);
