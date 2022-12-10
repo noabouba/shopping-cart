@@ -70,6 +70,7 @@ function Cart() {
                         </div>
                         <input type="submit" value="Buy Now" className="bn3637 bn37" ></input>
                     </form>
+                    <Title name='Total Price:' title={getTotalPrice()}></Title>
                 </div>
     }
 
