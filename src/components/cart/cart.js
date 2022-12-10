@@ -12,10 +12,6 @@ function Cart() {
     const [lastName, setLastName] = useState("");
 
     useEffect(() => {
-        window.addEventListener('storage', () => {
-            setIsBought(localStorage.getItem('isBought') === 'true');
-        });
-
         if(isBought === true) {
             window.localStorage.setItem('isBought', false);
             setCart([]);
