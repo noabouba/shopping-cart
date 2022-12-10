@@ -7643,6 +7643,11 @@
   "resolved" "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz"
   "version" "6.0.11"
 
+"react-hook-form@^7.40.0":
+  "integrity" "sha512-0rokdxMPJs0k9bvFtY6dbcSydyNhnZNXCR49jgDr/aR03FDHFOK6gfh8ccqB3fl696Mk7lqh04xdm+agqWXKSw=="
+  "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.40.0.tgz"
+  "version" "7.40.0"
+
 "react-icons@^4.7.1":
   "integrity" "sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw=="
   "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.7.1.tgz"
@@ -7742,7 +7747,7 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
-"react@*", "react@^18.0.0", "react@^18.2.0", "react@>= 16", "react@>= 16.8.0", "react@>=16.8":
+"react@*", "react@^16.8.0 || ^17 || ^18", "react@^18.0.0", "react@^18.2.0", "react@>= 16", "react@>= 16.8.0", "react@>=16.8":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
