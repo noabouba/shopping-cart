@@ -1,16 +1,13 @@
 import React from 'react';
-import Product from "./Product";
-import Title from "./Title";
-import {storeProducts} from '../data.js';
+import Product from './product/Product';
 
-function ProductList() {
+function ProductList(props) {
     return (
         <div className="py-3">
             <div className="container">
-                <Title name="our" title="Shoes"/>
                 <div className="row">
-                    { storeProducts.map(product =>{
-                        return <Product product={product} />;
+                    { props?.products?.map(product =>{
+                        return <Product product={product} key={product._id} isInCart={props.isInCart}/>;
                     })
                     }
                 </div>
