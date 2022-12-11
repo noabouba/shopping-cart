@@ -32,7 +32,7 @@ function Cart() {
     });
   };
 
-  function UserForm(props) {
+  function UserForm() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
 
@@ -71,7 +71,7 @@ function Cart() {
               type="input"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              placeholder="firstName"
+              placeholder="First Name"
               name="firstName"
               id="firstName"
               required
@@ -81,7 +81,7 @@ function Cart() {
               type="input"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              placeholder="lastName"
+              placeholder="Last Name"
               name="lastName"
               id="lastName"
               required

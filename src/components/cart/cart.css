@@ -13,7 +13,7 @@
   border: 0.3rem solid transparent;
   border-radius: 0.5rem;
 
-  width: 250px;
+  width: 150px;
   margin-top: 1%;
 }
 
@@ -29,6 +29,7 @@
   text-decoration: none;
   cursor: pointer;
   transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+  background-color: rgb(154, 216, 239);
 }
 
 #submit_form{
