@@ -19,8 +19,12 @@ export const NavLogo = styled(Link)`
   text-decoration: none;
   margin-left: 2%;
   &:hover {
-    color: black;
+    text-decoration: none;
+    color: #fdfdfe;
+    text-shadow: 0px 0px 5px #c2dfebe0, 0px 0px 10px #c2dfebe0, 0px 0px 10px #c2dfebe0,
+      0px 0px 20px #c2dfebe0;
   }
+  color: #fdfdfe;
 `;
 
 export const NavLink = styled(Link)`
