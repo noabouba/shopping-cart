@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProductList from "../ProductList";
 import Title from "../Title";
 import "./cart.css";
+import UserForm from "./UserForm";
 
 function Cart() {
   const [cart, setCart] = useState(
@@ -12,9 +13,9 @@ function Cart() {
   );
 
   useEffect(() => {
-    if (isBought === true) {
+    if (isBought) {
       window.localStorage.setItem("isBought", false);
-      setCart([]);
+      setIsBought(false);
     }
   }, []);
 
@@ -32,14 +33,11 @@ function Cart() {
     });
   };
 
-  function UserForm() {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-
-    const handleSubmit = () => {
+  
+    const handleSubmit = (first, last) => {
       let fullCartObj = {
-        firstName: firstName,
-        lastName: lastName,
+        firstName: first,
+        lastName: last,
         totalPrice: getTotalPrice(),
         products: mapCart(),
       };
@@ -62,37 +60,6 @@ function Cart() {
       });
     };
 
-    return (
-      <div className="form">
-        <form id="submit_form">
-          <div className="labels">
-            <input
-              className="input"
-              type="input"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              placeholder="First Name"
-              name="firstName"
-              id="firstName"
-              required
-            />
-            <input
-              className="input"
-              type="input"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              placeholder="Last Name"
-              name="lastName"
-              id="lastName"
-              required
-            />
-          </div>
-          <input type="submit" value="Buy Now" className="bn3637 bn37" onClick={e=>{e.preventDefault(); handleSubmit()} }></input>
-        </form>
-        <Title name="Total Price:" title={getTotalPrice()}></Title>
-      </div>
-    );
-  }
 
   return (
     <div>
@@ -104,7 +71,10 @@ function Cart() {
           <ProductList products={cart} isInCart={true}></ProductList>
 
           {isBought != true ? (
-            <UserForm />
+            <div>
+              <UserForm handleSubmit={handleSubmit}/>
+              <Title name="Total Price:" title={getTotalPrice()+"$"}></Title>
+            </div>
           ) : (
             <Title name="Cart Saved" title="Successfully!" />
           )}
