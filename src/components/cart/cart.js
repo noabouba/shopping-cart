@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProductList from "../ProductList";
 import Title from "../Title";
-import "./cart.css";
 import UserForm from "./UserForm";
 
 function Cart() {
